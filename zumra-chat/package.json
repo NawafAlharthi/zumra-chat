@@ -1,0 +1,42 @@
+{
+  "name": "zumra-chat",
+  "version": "1.0.0",
+  "description": "Instant chat rooms without sign-up",
+  "main": "backend/index.js",
+  "scripts": {
+    "start": "node backend/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon backend/server.js",
+    "client": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "test": "jest --detectOpenHandles",
+    "test:api": "jest backend/tests/api.test.js",
+    "test:socket": "jest backend/tests/socket.test.js",
+    "test:ui": "jest frontend/tests/ui.test.js",
+    "test:load": "k6 run tests/load-test.js"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testTimeout": 10000
+  },
+  "keywords": [
+    "chat",
+    "video",
+    "rooms",
+    "instant"
+  ],
+  "author": "Zumra Team",
+  "license": "MIT",
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "compression-webpack-plugin": "^11.1.0",
+    "css-minimizer-webpack-plugin": "^7.0.2",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "postcss-loader": "^8.1.1",
+    "terser-webpack-plugin": "^5.3.14"
+  },
+  "devDependencies": {
+    "webpack-cli": "^6.0.1"
+  }
+}
