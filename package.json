@@ -36,7 +36,6 @@
     "postcss-loader": "^8.1.1",
     "terser-webpack-plugin": "^5.3.14"
   },
-  "devDependencies": {
-    "webpack-cli": "^6.0.1"
-  }
+"devDependencies": { "webpack-cli": "^5.1.4" }
+
 }
